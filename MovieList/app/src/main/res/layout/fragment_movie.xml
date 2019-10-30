@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_title_label" />
+    <EditText
+        android:id="@+id/movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/movie_title_hint"/>
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_details_label" />
+
+    <EditText
+        android:id="@+id/movie_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/movie_details_hint"/>
+
+    <Button
+        android:id="@+id/movie_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_comment_label" />
+
+    <EditText
+        android:id="@+id/movie_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/movie_comment_hint"
+        android:padding = "50dp"/>
+
+    <CheckBox
+        android:id="@+id/movie_solved"
+        android:layout_width="206dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/movie_solved_label" />
+
+
+</LinearLayout>

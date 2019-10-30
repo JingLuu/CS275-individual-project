@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MovieList</string>
+    <string name="movie_title_hint">IMDB rate for the movie...</string>
+    <string name="movie_title_label">Movie Title</string>
+    <string name="movie_details_label">Details</string>
+    <string name="movie_details_hint">Synopsis...</string>
+    <string name="movie_solved_label">Checked</string>
+    <string name="movie_comment_label">Comment</string>
+    <string name="movie_comment_hint">Write down your thoughts</string>
+
+</resources>
