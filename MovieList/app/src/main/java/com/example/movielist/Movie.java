@@ -15,6 +15,8 @@ public class Movie {
     public Movie(UUID id) {
         mId = id;
         mDate = new Date();
+        mTitle = "This title should give a default value！";
+        mSolved = false;
     }
 
 

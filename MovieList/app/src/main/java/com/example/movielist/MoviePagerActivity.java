@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import java.util.List;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -15,7 +15,7 @@ import java.util.UUID;
 
 public class MoviePagerActivity extends AppCompatActivity {
     private static final String EXTRA_MOVIE_ID = "com.example.movielist.movie_id";
-    private ViewPager mViewPager;
+    //private ViewPager mViewPager;
     private List<Movie> mMovies;
     public static Intent newIntent(Context packageContext, UUID movieId){
         Intent intent = new Intent(packageContext, MoviePagerActivity.class);
@@ -28,12 +28,11 @@ public class MoviePagerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie_pager);
         UUID movieId = (UUID) getIntent().getSerializableExtra(EXTRA_MOVIE_ID);
 
-        mViewPager = (ViewPager) findViewById(R.id.movie_view_pager);
+        ViewPager mViewPager= findViewById(R.id.movie_view_pager);
 
         mMovies = MovieLab.get(this).getMovies();
         FragmentManager fragmentManager = getSupportFragmentManager();
         mViewPager.setAdapter(new FragmentPagerAdapter(fragmentManager) {
-            @NonNull
             @Override
             public Fragment getItem(int position) {
                 Movie movie = mMovies.get(position);
@@ -51,5 +50,8 @@ public class MoviePagerActivity extends AppCompatActivity {
                 break;
             }
         }
+    }
+    public void deletedPet() {
+        finish();
     }
 }
