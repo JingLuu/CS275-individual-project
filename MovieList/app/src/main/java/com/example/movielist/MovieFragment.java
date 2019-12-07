@@ -38,7 +38,12 @@ public class MovieFragment extends Fragment {
         UUID movieId = (UUID) getArguments().getSerializable(ARG_MOVIE_ID);
         mMovie = MovieLab.get(getActivity()).getMovie(movieId);
     }
-
+    @Override
+    public void onPause() {
+        super.onPause();
+        MovieLab.get(getActivity())
+                .updateMovie(mMovie);
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View v = inflater.inflate(R.layout.fragment_movie, container, false);

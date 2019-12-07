@@ -10,9 +10,13 @@ public class Movie {
     private boolean mSolved;
 
     public Movie(){
-        mId = UUID.randomUUID();
-        mDate= new Date();
+        this(UUID.randomUUID());
     }
+    public Movie(UUID id) {
+        mId = id;
+        mDate = new Date();
+    }
+
 
     public UUID getId(){
         return mId;
